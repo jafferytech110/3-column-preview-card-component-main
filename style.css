@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --cyan: hsl(184, 100%, 22%);
+  --darkCyan: hsl(179, 100%, 13%);
+  --paragraph: hsla(0, 0%, 100%, 0.75);
+  --headings: hsl(0, 0%, 95%);
+  --button: hsl(0, 0%, 95%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* margin-left: 10%;
+  margin-right: 10%;
+  width: 50%;
+  max-width: 60%; */
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 50%; */
+  width: 100%;
+}
+
+.container .sedans {
+  background-color: var(--orange);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  height: 100%;
+  gap: 2rem;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.container .suvs {
+  background-color: var(--cyan);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 2rem;
+  height: 100%;
+}
+
+.container .luxury {
+  background-color: var(--darkCyan);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+  height: 100%;
+  justify-content: space-between;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+h1 {
+  color: var(--headings);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 1.5rem;
+}
+
+p {
+  color: var(--paragraph);
+  margin-top: 1.5rem;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+button {
+  background-color: var(--button);
+  border: none;
+  outline: none;
+  margin-top: 2rem;
+  width: 100px;
+  padding: 0.6rem 0.2rem;
+  border-radius: 25px;
+  font-size: 0.7rem;
+}
+
+button#orange {
+  color: var(--orange);
+}
+
+button#cyan {
+  color: var(--cyan);
+}
+
+button#darkCyan {
+  color: var(--darkCyan);
+}
+
+@media screen and (max-width: 720px) {
+  .container {
+    margin-top: 2rem;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  .cards .suvs,
+  .cards .luxury,
+  .cards .sedans {
+    border-radius: 0;
+    width: 400px;
+    height: 500px;
+    min-width: 300px;
+  }
+
+  .attribution {
+    display: none;
+  }
+}
